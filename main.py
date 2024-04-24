@@ -33,11 +33,6 @@ def main():
     lost = False
 
     while run:
-        name = input('What is your name traveler?: ')
-
-        if name.lower().strip() != str:
-            print('Welcome',name,', your journey has began.')
-
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -52,6 +47,7 @@ def main():
                 else:
                     # Append the typed character to the user_text
                     user_text += event.unicode
+                    
 
         if lost:
             lost_text = FONT.render("You Lost!", 1, "white")
